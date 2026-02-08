@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배너 베리에이션 - 홍보카피 자동 요약</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📝 배너 베리에이션</h1>
+            <p class="subtitle">글자수 제한에 맞춰 홍보카피를 자동으로 요약/변환</p>
+        </header>
+
+        <main class="main-content">
+            <!-- 원본 카피 입력 섹션 -->
+            <section class="input-section">
+                <h2>원본 홍보 카피 입력</h2>
+                <div class="form-group">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" placeholder="예: 봄 할인 프로모션" maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">카테고리</label>
+                    <select id="category">
+                        <option value="프로모션">프로모션</option>
+                        <option value="이벤트">이벤트</option>
+                        <option value="신규출시">신규출시</option>
+                        <option value="공지사항">공지사항</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="originalText">원본 카피</label>
+                    <textarea
+                        id="originalText"
+                        rows="5"
+                        placeholder="예: 봄맞이 특별 할인! 모든 상품 최대 50% 할인 이벤트가 진행됩니다. 지금 바로 방문하셔서 놀라운 혜택을 받아보세요!"
+                        maxlength="5000"
+                    ></textarea>
+                    <div class="char-count">
+                        <span id="charCount">0</span> / 5000자
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>글자수 제한 선택</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="10" checked> 10자
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="20" checked> 20자
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="50" checked> 50자
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="100" checked> 100자
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn-generate" id="generateBtn">
+                    <span class="btn-icon">✨</span>
+                    베리에이션 생성
+                </button>
+            </section>
+
+            <!-- 결과 표시 섹션 -->
+            <section class="result-section" id="resultSection" style="display: none;">
+                <div class="result-header">
+                    <h2>생성된 베리에이션</h2>
+                    <button class="btn-secondary" id="clearBtn">초기화</button>
+                </div>
+
+                <div id="variationList" class="variation-list">
+                    <!-- 베리에이션 카드가 동적으로 추가됩니다 -->
+                </div>
+            </section>
+
+            <!-- 로딩 표시 -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>베리에이션 생성 중...</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 배너 베리에이션 - AI 기반 홍보카피 자동 요약 시스템</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
