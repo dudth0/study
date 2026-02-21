@@ -63,9 +63,43 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label>배너 이미지 사이즈 선택</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="imageSize" value="1:1" checked>
+                            <span class="radio-content">
+                                <span class="radio-title">1:1 정사각형</span>
+                                <span class="radio-desc">Instagram 피드</span>
+                            </span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="imageSize" value="16:9">
+                            <span class="radio-content">
+                                <span class="radio-title">16:9 가로형</span>
+                                <span class="radio-desc">YouTube, 블로그</span>
+                            </span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="imageSize" value="9:16">
+                            <span class="radio-content">
+                                <span class="radio-title">9:16 세로형</span>
+                                <span class="radio-desc">Instagram Stories</span>
+                            </span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="imageSize" value="4:3">
+                            <span class="radio-content">
+                                <span class="radio-title">4:3 표준</span>
+                                <span class="radio-desc">Facebook 포스트</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
                 <button class="btn-generate" id="generateBtn">
                     <span class="btn-icon">✨</span>
-                    배너 문구 생성
+                    배너 문구 및 이미지 생성
                 </button>
             </section>
 
@@ -84,7 +118,7 @@
             <!-- 로딩 표시 -->
             <div class="loading" id="loading" style="display: none;">
                 <div class="spinner"></div>
-                <p>배너 문구 생성 중...</p>
+                <p id="loadingText">배너 문구 생성 중...</p>
             </div>
         </main>
 
